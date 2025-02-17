@@ -1,7 +1,7 @@
 { pkgs, inputs, lib, values, ... }: {
 	
 	home = {
-		stateVersion = values.installedVersion;
+		stateVersion = values.installationVersion;
 		sessionPath = [ "$HOME/.cargo/bin" ];
 	};
 	nixpkgs.config.allowUnfree = true;
@@ -13,9 +13,9 @@
 
 		clang rustup
 
-		thunderbird
+		tutanota-desktop
 	];
 	
 	#These things exist, but won't display in menus:
-	xdg.desktopEntries = lib.attrset.genAttrs [ "nixos-manual" ] (_: { name = ""; noDisplay = true;});
+	xdg.desktopEntries = lib.attrsets.genAttrs [ "nixos-manual" ] (_: { name = ""; noDisplay = true;});
 }
