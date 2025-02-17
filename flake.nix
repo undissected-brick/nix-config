@@ -12,18 +12,18 @@
 
   outputs = { self, nixpkgs, ... }@inputs:
   let
-    mkSystem = system: location: mainuser: nixpkgs.lib.nixosSystem {
+    mkSystem = system: location: nixpkgs.lib.nixosSystem {
       system = system;
       modules = [
         ./hosts/${location}/configuration.nix
         inputs.home-manager.nixosModules.default
       ];
-      specialArgs = {inherit inputs mainuser;};
+      specialArgs = {inherit inputs; imports = [ values.nix ];};
     };
 
   in {
     nixosConfigurations = {
-			t520 = mkSystem "x86_64-linux" "t520" "joseph";
+			t520 = mkSystem "x86_64-linux" "t520"; 
     };
   };
 }

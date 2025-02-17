@@ -1,14 +1,12 @@
-{ pkgs, mainuser, ... }: {
+{ pkgs, values, ... }: {
 
 # Define a user account. Don't forget to set a password with ‘passwd’.
 	users.users = {
-		${mainuser} = {
+		${values.mainuser} = {
 			isNormalUser = true;
-			description = mainuser;
+			description = values.mainuser;
 			extraGroups = [ "networkmanager" "wheel" ];
-			packages = with pkgs; [
-				thunderbird
-			];
+			packages = with pkgs; [ ];
 		};
 
 	};
