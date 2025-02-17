@@ -1,6 +1,4 @@
-{ ... }: {
-	values = {
-		mainuser = "joseph";
-		installationVersion = "24.11";
-	};
+{
+	mainuser = "joseph";
+	installationVersion = "24.11";
 }

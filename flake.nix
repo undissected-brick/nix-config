@@ -12,13 +12,14 @@
 
   outputs = { self, nixpkgs, ... }@inputs:
   let
+		values = import ./values.nix;
     mkSystem = system: location: nixpkgs.lib.nixosSystem {
       system = system;
       modules = [
         ./hosts/${location}/configuration.nix
         inputs.home-manager.nixosModules.default
       ];
-      specialArgs = {inherit inputs; imports = [ values.nix ];};
+      specialArgs = {inherit inputs values;};
     };
 
   in {

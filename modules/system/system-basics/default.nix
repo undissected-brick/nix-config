@@ -5,6 +5,7 @@
 		./print.nix
 		./sound.nix
 		./system-packages.nix
+		./upkeep.nix
 		./users.nix
 	];
 }
