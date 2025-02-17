@@ -4,7 +4,6 @@
   # $ nix search wget
 
 	environment.systemPackages = with pkgs; [
-		neovim
 		xclip xsel
 
 		git

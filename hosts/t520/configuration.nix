@@ -2,6 +2,7 @@
 	imports = [ 
 		./hardware-configuration.nix
 		../../modules/system
+		../../modules/nixvim
 		inputs.home-manager.nixosModules.default
 	];
 
