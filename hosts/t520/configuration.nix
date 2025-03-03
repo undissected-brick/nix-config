@@ -1,8 +1,9 @@
 { config, inputs, pkgs, values, ... }: {
 	imports = [ 
 		./hardware-configuration.nix
-		../../modules/system
 		../../modules/nixvim
+		../../modules/system
+		../../modules/desktop
 		inputs.home-manager.nixosModules.default
 	];
 
@@ -11,8 +12,8 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-
+	
+	/*
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
@@ -28,12 +29,14 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+	*/
 
   system.stateVersion = "24.11"; # Did you read the comment?
 
 	home-manager = {
 		users.${values.mainuser} = import ./home.nix;
 		extraSpecialArgs = { inherit values; };
+		backupFileExtension = "backup1";
 	};
 
 }

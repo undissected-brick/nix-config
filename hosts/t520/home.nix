@@ -1,18 +1,21 @@
 { pkgs, inputs, lib, values, ... }: {
 	
+	imports = [
+		../../home-modules/hypr
+	];
+
 	home = {
 		stateVersion = values.installationVersion;
 		sessionPath = [ "$HOME/.cargo/bin" ];
-	};
-	nixpkgs.config.allowUnfree = true;
+	};	
+
+	nixpkgs.config.allowUnfree = true;	
 
 	programs.home-manager.enable = true;
 
 	home.packages = with pkgs; [
 		firefox
-
 		clang rustup
-
 		tutanota-desktop
 	];
 	

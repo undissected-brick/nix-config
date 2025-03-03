@@ -1,5 +1,6 @@
 { pkgs, ... }: {
 	imports = [
+		./font.nix
 		./locale.nix
 		./maintenance.nix
 		./network.nix
