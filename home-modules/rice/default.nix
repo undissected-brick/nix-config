@@ -1,7 +1,7 @@
 { pkgs, ... }: {
 
 	imports = [
-		./hyprconf.nix
+		./hypr
 	];
 
 	home.packages = with pkgs; [
