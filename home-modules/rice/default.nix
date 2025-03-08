@@ -21,6 +21,8 @@
     adwaita-icon-theme
     hicolor-icon-theme
 	];
+	
+	home.file = { ".config/waybar" = ./waybar; };
 
 	# GTK is a cross platform toolkit for creating GUI applications
 

@@ -1,7 +1,7 @@
 { pkgs, inputs, lib, values, ... }: {
 	
 	imports = [
-		../../home-modules/hypr
+		../../home-modules/rice
 	];
 
 	home = {
