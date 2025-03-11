@@ -1,4 +1,8 @@
 { pkgs, ... }: {
+	imports = [
+	 ../kitty
+	];
+
 	home.packages = with pkgs; [
 		hyprpaper hyprlock hypridle
     xdg-desktop-portal-hyprland

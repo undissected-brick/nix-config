@@ -2,20 +2,13 @@
 	programs.nixvim = {
 		enable = true;
 		defaultEditor = true;
-		imports = [ ./luacode.nix ];
+		imports = [ 
+			./luacode.nix 
+			./plugins.nix
+		];
 
-		plugins.lsp = {
-      enable = true;
-      servers.rust-analyzer = {
-        enable = true;
-    	};
-    };
+		plugins.lsp.enable = true;
 		colorschemes.gruvbox.enable = true;
-		plugins = {
-			lualine.enable = true;
-			telescope.enable = true;
-			treesitter.enable = true;
-		};
 	};
 }
 
