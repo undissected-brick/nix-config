@@ -1,12 +1,12 @@
 { pkgs, ... }: {
   fonts = {
     packages = with pkgs; [
-			nerd-fonts.fantasque-sans-mono
+			nerd-fonts.caskaydia-cove
     ];
     fontconfig = {
       enable = true;
       defaultFonts = {
-        monospace = [ "FantasqueSansMono Nerd Font" ];  # Set as default monospace font
+        monospace = [ "CaskaydiaCove Nerd Font" ];  # Set as default monospace font
       };
     };
   };

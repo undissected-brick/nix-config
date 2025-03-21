@@ -4,7 +4,7 @@
 	];
 
 	home.packages = with pkgs; [
-		hyprpaper hyprlock hypridle
+		hyprsunset hyprpaper hyprlock hypridle
     xdg-desktop-portal-hyprland
     polkit_gnome
     networkmanagerapplet
@@ -21,7 +21,7 @@
     hicolor-icon-theme
 	];
 	
-	#home.file = { ".config/waybar".source = ./waybar; };
+	# home.file = { ".config/waybar".source = ./waybar; };
 
 	# GTK is a cross platform toolkit for creating GUI applications
 

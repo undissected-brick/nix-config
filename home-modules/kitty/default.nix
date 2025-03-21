@@ -14,8 +14,8 @@ in {
     enable = cfg.enable;
     shellIntegration.enableZshIntegration = true;
     font = {
-      name = "FantasqueSansMono NF";
-      package = pkgs.nerd-fonts.fantasque-sans-mono;
+      name = "CaskaydiaCove NF";
+      package = pkgs.nerd-fonts.caskaydia-cove;
       size = 12;
     };
     settings = {
