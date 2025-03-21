@@ -1,4 +1,4 @@
-# Another plagiarism of Ren's stuff. This is probably how coding is supposed to be
+# Another plagiarism of Renpenguin's stuff. This is probably how coding is supposed to be
 { pkgs, lib, config, ... }:
 
 let cfg = config.modules.kitty;
