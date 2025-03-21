@@ -5,7 +5,8 @@
 
 	environment.systemPackages = with pkgs; [
 		xclip xsel
-
+		gnupg gpg-tui
+		pass-secret-service # Lets stuff use secret storage
 		git
 	];
 
