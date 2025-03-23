@@ -5,6 +5,7 @@
 
 	home.packages = with pkgs; [
 		hyprsunset hyprpaper hyprlock hypridle
+		hyprland-qt-support
     xdg-desktop-portal-hyprland
     polkit_gnome
     networkmanagerapplet
@@ -21,8 +22,6 @@
     hicolor-icon-theme
 	];
 	
-	# home.file = { ".config/waybar".source = ./waybar; };
-
 	# GTK is a cross platform toolkit for creating GUI applications
 
 	gtk = {

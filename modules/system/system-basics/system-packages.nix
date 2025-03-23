@@ -6,7 +6,7 @@
 	environment.systemPackages = with pkgs; [
 		xclip xsel
 		gnupg gpg-tui
-		pass-secret-service # Lets stuff use secret storage
+		seahorse gnome-keyring # GNOME Password manager that provides an org.freedesktop.secrets interface
 		git
 		yazi
 	];
