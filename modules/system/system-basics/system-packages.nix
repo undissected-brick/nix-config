@@ -8,6 +8,7 @@
 		gnupg gpg-tui
 		pass-secret-service # Lets stuff use secret storage
 		git
+		yazi
 	];
 
 	programs.firefox.enable = true;

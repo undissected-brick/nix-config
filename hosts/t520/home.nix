@@ -2,6 +2,7 @@
 	
 	imports = [
 		../../home-modules/rice
+		../../home-modules/yazi
 	];
 
 	home = {
