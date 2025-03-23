@@ -53,5 +53,11 @@
     size = 24;
   };
 	
-	home.file.".config/fuzzel/fuzzel.ini".source = ./fuzzel.ini;
+	home.file = {
+		".config/hypr".source = ./hypr;
+		".config/kitty".source = ./kitty;
+		".config/waybar".source = ./waybar;
+		".config/wlogout".source = ./wlogout;
+		".config/fuzzel/fuzzel.ini".source = ./fuzzel.ini;
+	};
 }
