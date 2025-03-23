@@ -52,4 +52,6 @@
     name = "catppuccin-macchiato-dark-cursors";
     size = 24;
   };
+	
+	home.file.".config/fuzzel/fuzzel.ini".source = ./fuzzel.ini;
 }
