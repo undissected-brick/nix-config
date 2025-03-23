@@ -1,4 +1,4 @@
-_: {
+{
 	nix.optimise = {
 		automatic = true;
 		dates = [ "03:45" ];
@@ -6,7 +6,7 @@ _: {
 
 	nix.gc = {
 		automatic = true;
-		dates = "weekly";
-		options = "--delete-older-than-14d";
+		dates = "03:40";
+		options = "--delete-older-than 14d";
 	};
 }
