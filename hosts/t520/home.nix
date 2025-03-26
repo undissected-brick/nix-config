@@ -1,7 +1,7 @@
 { pkgs, inputs, lib, values, ... }: {
 	
 	imports = [
-		../../home-modules/rice
+		../../home-modules/windows-and-tiles
 		../../home-modules/yazi
 	];
 
