@@ -12,7 +12,7 @@ in {
 
   config.programs.kitty = {
     enable = cfg.enable;
-    shellIntegration.enableZshIntegration = true;
+    shellIntegration.enableBashIntegration = true;
     font = {
       name = "CaskaydiaCove NF";
       package = pkgs.nerd-fonts.caskaydia-cove;
@@ -38,10 +38,10 @@ in {
     };
 
     keybindings = {
-      "alt+up" = "neighbouring_window up";
-      "alt+down" = "neighbouring_window down";
-      "alt+left" = "neighbouring_window left";
-      "alt+right" = "neighbouring_window right";
+      "alt+k" = "neighbouring_window up";
+      "alt+j" = "neighbouring_window down";
+      "alt+l" = "neighbouring_window left";
+      "alt+h" = "neighbouring_window right";
       "alt+q" = "new_window";
     };
 
