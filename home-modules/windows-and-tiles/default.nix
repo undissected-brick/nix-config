@@ -13,7 +13,6 @@
     brightnessctl playerctl
     grimblast jq
     wlogout
-    dunst libnotify
     waybar
     wl-clipboard wl-clip-persist wl-clipboard-x11
     fuzzel

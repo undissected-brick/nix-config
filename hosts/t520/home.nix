@@ -4,6 +4,7 @@
 		../../home-modules/windows-and-tiles
 		../../home-modules/yazi
 		../../home-modules/home-packages
+		../../home-modules/system
 	];
 
 	home = {
