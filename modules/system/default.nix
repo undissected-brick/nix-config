@@ -1,6 +1,7 @@
 { pkgs, mainuser, ... }: {
 	imports = [
-		./system-basics
 		./battery-alert
+		./secrets
+		./system-basics
 	];
 }

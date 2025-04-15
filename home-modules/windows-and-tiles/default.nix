@@ -18,8 +18,6 @@
     hicolor-icon-theme
 	];
 
-	services.gnome-keyring.enable = true;
-	
 	# GTK is a cross platform toolkit for creating GUI applications
 
 	gtk = {
