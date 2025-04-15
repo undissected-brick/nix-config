@@ -3,5 +3,6 @@
 		syncthing
 		obsidian
 		thunderbird
+		ddgr
 	];
 }
