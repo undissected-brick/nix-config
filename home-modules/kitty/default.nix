@@ -1,33 +1,19 @@
 # Another plagiarism of Renpenguin's stuff. This is probably how coding is supposed to be
-{ pkgs, lib, config, ... }:
-
-let cfg = config.modules.kitty;
-
-in {
-  options.modules.kitty = with lib; {
-    enable = mkEnableOption "kitty";
-    foreground = mkOption { type = types.str; };
-    background = mkOption { type = types.str; };
-  };
-
-  config.programs.kitty = {
-    enable = cfg.enable;
+{ pkgs, lib, config, ... }: {
+	programs.kitty = {
+    enable = true;
     shellIntegration.enableBashIntegration = true;
     font = {
       name = "CaskaydiaCove NF";
       package = pkgs.nerd-fonts.caskaydia-cove;
-      size = 12;
+      size = 11;
     };
     settings = {
       enable_audio_bell = false;
-      confirm_os_window_close = 2;
+      confirm_os_window_close = 0;
 
       url_color = "#0087bd";
       url_style = "straight";
-
-      foreground = cfg.foreground;
-      background = cfg.background;
-      background_opacity = 0.9;
 
       remember_window_size = false;
       initial_window_width = "100c";

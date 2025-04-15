@@ -1,8 +1,5 @@
 { pkgs, ... }: {
-	imports = [
-	 ../kitty
-	];
-
+	
 	home.packages = with pkgs; [
 		hyprsunset hyprpaper hyprlock hypridle
 		hyprland-qt-support
@@ -20,6 +17,8 @@
     adwaita-icon-theme
     hicolor-icon-theme
 	];
+
+	services.gnome-keyring.enable = true;
 	
 	# GTK is a cross platform toolkit for creating GUI applications
 
