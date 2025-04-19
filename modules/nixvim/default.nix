@@ -3,6 +3,7 @@
 		enable = true;
 		defaultEditor = true;
 		imports = [ 
+			./globals.nix
 			./opts.nix 
 			./plugins.nix
 		];
