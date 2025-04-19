@@ -3,7 +3,7 @@
 		enable = true;
 		defaultEditor = true;
 		imports = [ 
-			./luacode.nix 
+			./opts.nix 
 			./plugins.nix
 		];
 
