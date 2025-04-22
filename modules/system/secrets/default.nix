@@ -25,7 +25,5 @@
     XDG_DATA_DIRS = [
       "${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}"
     ];
-		ELECTRON_EXTRA_LAUNCH_ARGS = "--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-secret-service";
-		NIXOS_OZONE_WL = "1";  # Critical for Wayland
   };
 }
