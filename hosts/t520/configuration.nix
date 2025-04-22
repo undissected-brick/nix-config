@@ -1,9 +1,10 @@
 { config, inputs, pkgs, values, ... }: {
 	imports = [ 
 		./hardware-configuration.nix
-		../../modules/nixvim
-		../../modules/system
 		../../modules/desktop
+		../../modules/nixvim
+		../../modules/shell
+		../../modules/system
 		inputs.home-manager.nixosModules.default
 	];
 

@@ -16,7 +16,7 @@ in {
 
     settings = {
       opener.play = [
-        { run = ''${./viv.sh} "$@"''; orphan = true; for = "unix"; }
+        { run = ''${./scripts/viv.sh} "$@"''; orphan = true; for = "unix"; }
       ];
     };
 
@@ -68,4 +68,6 @@ in {
     imv ffmpeg p7zip 
     starship
   ];
+
+	home.file.".scripts/yazi".source = ./scripts;
 }
