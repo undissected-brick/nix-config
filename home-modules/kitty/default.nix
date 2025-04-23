@@ -2,7 +2,7 @@
 { pkgs, lib, config, ... }: {
 	programs.kitty = {
     enable = true;
-    shellIntegration.enableBashIntegration = true;
+    shellIntegration.enableZshIntegration = true;
     font = {
       name = "CaskaydiaCove NF";
       package = pkgs.nerd-fonts.caskaydia-cove;
