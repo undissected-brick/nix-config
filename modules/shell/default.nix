@@ -1,4 +1,5 @@
 { pkgs, values, ... }: {
+
 	imports = [
 		./aliases.nix
 	];
@@ -11,16 +12,21 @@
 			enable = true;
 			dotDir = ".config/zsh";
 
+
 			enableCompletion = true;
 			autosuggestion.enable = true;
 
 			syntaxHighlighting.enable = true;
 
-			oh-my-zsh = {
+			prezto = {
 				enable = true;
-				theme = "robbyrussell";
+				editor.keymap = "vi";
 			};
 
+			oh-my-zsh = {
+				enable = true;
+				theme = "eastwood";
+			};
 		};
 	};
 }
