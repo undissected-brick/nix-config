@@ -13,6 +13,7 @@
 			url = "github:nix-community/nixvim";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
   };
 
   outputs = { self, nixpkgs, ... }@inputs:
@@ -23,9 +24,9 @@
       modules = [
         ./hosts/${location}/configuration.nix
         inputs.home-manager.nixosModules.default
-				inputs.nixvim.nixosModules.nixvim
+        inputs.nixvim.nixosModules.nixvim
       ];
-      specialArgs = {inherit inputs values;};
+      specialArgs = { inherit inputs values; };
     };
 
   in {
