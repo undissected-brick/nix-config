@@ -1,10 +1,11 @@
 { pkgs, ... }: {
 	
 	environment.systemPackages = with pkgs; [
+		ocaml
 		opam 
 		gnumake
 		ocamlPackages.utop
-		ocamlPackages.ocamlbuild
+		ocamlPackages.ocamlbuild 
 		dune_3
 	];
 }

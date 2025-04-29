@@ -10,8 +10,11 @@
 	];
 
   # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot = {
+		loader.systemd-boot.enable = true;
+		loader.efi.canTouchEfiVariables = true;
+		kernelParams = [ "console=tty2" ]; # Print startup messages to tty2
+	};
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
