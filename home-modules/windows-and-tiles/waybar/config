@@ -74,19 +74,24 @@
 	"battery": {
 			"interval": 2,
 			"states": {
-					"full": 100,
-					"good": 80,
-					"medium": 50,
-					"low": 20,
-					"critical": 10
+					"is100": 100,
+					"is90": 90,
+					"is80": 80,
+					"is70": 70,
+					"is60": 60,
+					"is50": 50,
+					"is40": 40,
+					"is30": 30,
+					"is20": 20,
+					"is10": 10
 			},
 			"format": "{capacity}% {icon}",
 			"format-alt": "{time} {icon}",
 			"format-time": "{H}h {M}m",
 			"format-full": "{icon}",
 			"format-icons": {
-				"default": ["󰂎", "󰁻", "󰁾", "󰂁", "󰁹"],
-				"charging": ["󰢟", "󰂆", "󰢝", "󰂊", "󰂅"]
+				"default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+				"charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
 			},
 			"tooltip-format": "Charged {capacity}%"
 	}
