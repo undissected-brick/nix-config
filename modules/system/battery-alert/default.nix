@@ -1,9 +1,8 @@
 { pkgs, values, ... }: {
 	systemd.services.battery-alert = {
-		serviceConfig.Type = "oneshot";
-		path = with pkgs; [ bash ];
+		serviceConfig.Type = "exec";
 		script = ''
-			bash /home/${values.mainuser}/${values.flakeDir}/modules/system/battery-alert/battery-alert.sh
+			${pkgs.zsh}/bin/zsh /home/${values.mainuser}/.scripts/battery-alert/battery-alert.sh
 		'';
 	};
 
@@ -11,8 +10,10 @@
 		wantedBy = [ "timers.target" ];
 		partOf = [ "battery-alert.service" ];
 		timerConfig = {
-			OnCalendar = "*:00";
+			OnCalendar = "*:0/1";
 			Unit = "battery-alert.service";
 		};
 	};
+
+	home-manager.users.${values.mainuser}.home.file.".scripts/battery-alert".source = ./scripts;
 }

@@ -1,5 +1,5 @@
-{
-# Using renpenguin's dunstrc file
+{ pkgs }: {
+# Using renpenguin's dunstrc file (modified)
 # See dunst(5) for all configuration options
 
 	global = {
@@ -168,7 +168,7 @@
     dmenu = "${pkgs.dmenu}/bin/dmenu -p dunst";
 
     # Browser for opening urls in context menu.
-    browser = "${pkgs.xdg-open}/bin/xdg-open";
+    browser = "${pkgs.xdg-utils}/bin/xdg-open";
 
     # Always run rule-defined scripts, even if the notification is suppressed
     always_run_script = true;
@@ -198,6 +198,7 @@
     mouse_left_click = "close_current";
     mouse_middle_click = "do_action, close_current";
     mouse_right_click = "context";
+	};
 
 	urgency_low = {
     # IMPORTANT: colors have to be defined in quotation marks.

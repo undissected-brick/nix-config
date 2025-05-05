@@ -3,7 +3,6 @@
 	imports = [
 		../../home-modules/home-packages
 		../../home-modules/kitty
-		../../home-modules/system
 		../../home-modules/windows-and-tiles
 		../../home-modules/yazi
 	];
