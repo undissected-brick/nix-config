@@ -5,8 +5,8 @@ let
   yazi-plugins = pkgs.fetchFromGitHub {
 		owner = "yazi-rs";
 		repo = "plugins";
-		rev = "8945e543ebbaa25de155b7101a917eba007252f2";
-		hash = "sha256-ko/vvItKtQSz5rbP3TMb4R1bywW2q8hj7E/A++vhVqQ=";
+		rev = "864a0210d9ba1e8eb925160c2e2a25342031d8d3";
+		hash = "sha256-m3709h7/AHJAtoJ3ebDA40c77D+5dCycpecprjVqj/k=";
 	};
 in {
   programs.yazi = {
@@ -23,12 +23,11 @@ in {
     plugins = {
       chmod = "${yazi-plugins}/chmod.yazi";
       full-border = "${yazi-plugins}/full-border.yazi";
-			max-preview = "${yazi-plugins}/max-preview.yazi";
 			mount = "${yazi-plugins}/mount.yazi";
 			starship = pkgs.fetchFromGitHub {
 				owner = "Rolv-Apneseth";
 				repo = "starship.yazi";
-				rev = "d1cd0a38aa6a2c2e86e62a466f43e415f781031e";
+				rev = "6fde3b2d9dc9a12c14588eb85cf4964e619842e6";
 				sha256 = "sha256-XiEsykudwYmwSNDO41b5layP1DqVa89e6Emv9Qf0mz0=";
 			};
     };

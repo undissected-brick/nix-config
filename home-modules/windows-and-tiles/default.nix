@@ -6,7 +6,7 @@
     xdg-desktop-portal-hyprland
     polkit_gnome
     networkmanagerapplet
-    xwaylandvideobridge
+    kdePackages.xwaylandvideobridge
     brightnessctl playerctl
     grimblast jq
     wlogout
