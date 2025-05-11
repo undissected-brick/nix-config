@@ -4,7 +4,7 @@
 		../../modules/desktop
 		../../modules/nixvim
 		../../modules/ocaml
-		../../modules/shell
+		../../modules/shell/zsh
 		../../modules/system
 		inputs.home-manager.nixosModules.default
 	];
