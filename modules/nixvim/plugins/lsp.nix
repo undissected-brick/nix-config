@@ -12,12 +12,12 @@
 		lsp = {
 			enable = true;
 			inlayHints = true;
+
+			servers = {
+				ocamllsp.enable = true;
+			};
 		};
 	};
-
-	extraConfigLuaPost = ''
-		require'lspconfig'.ocamllsp.setup({})
-	'';
-
+	
 	extraPackages = with pkgs.ocamlPackages; [ ocaml-lsp ocamlformat ];
 }
