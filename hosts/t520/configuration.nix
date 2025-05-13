@@ -2,7 +2,7 @@
 	imports = [ 
 		./hardware-configuration.nix
 		../../modules/desktop
-		../../modules/nixvim
+		../../modules/nvf
 		../../modules/ocaml
 		../../modules/shell/zsh
 		../../modules/system
