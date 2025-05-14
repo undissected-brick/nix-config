@@ -1,11 +1,11 @@
 { pkgs, ...}: {
   environment.variables.EDITOR = "nvim";
-  # environment.systemPackages = with pkgs.ocamlPackages; [ ocamlformat ocaml-lsp ];
   # Manual: https://notashelf.github.io/nvf/options.html
   programs.nvf = {
     enable = true;
 
     settings.vim = {
+      extraLuaFiles = [ ./lua/ocaml.lua ];
       options = {
         shiftwidth = 2;
       };
@@ -22,20 +22,8 @@
         enable = false;
       };
 
-      lsp = {
-        # This must be enabled for the language modules to hook into
-        # the LSP API.
-        enable = true;
-
-        formatOnSave = false;
-        lspkind.enable = false;
-        lightbulb.enable = false;
-        lspsaga.enable = false;
-        trouble.enable = false;
-        lspSignature.enable = true; # conflicts with blink in maximal
-        otter-nvim.enable = false;
-        nvim-docs-view.enable = false;
-      };
+      # Must be enabled for the language modules to hook into the LSP API:
+      lsp.enable = true; 
 
       debugger = {
         nvim-dap = {
@@ -54,60 +42,21 @@
         nix.enable = true;
         markdown.enable = true;
 
-        bash.enable = true;
-        # ocaml.enable = true;
         rust = {
           enable = true;
           crates.enable = true;
         };
 
+        bash.enable = true;
         clang.enable = true;
 
         css.enable = false;
         html.enable = false;
-
-        sql.enable = false;
-        java.enable = false;
-        kotlin.enable = false;
-        ts.enable = false;
-        go.enable = false;
-        lua.enable = false;
-        zig.enable = false;
-        python.enable = false;
-        typst.enable = false;
-
-        # Language modules that are not as common.
-        assembly.enable = false;
-        astro.enable = false;
-        nu.enable = false;
-        csharp.enable = false;
-        julia.enable = false;
-        vala.enable = false;
-        scala.enable = false;
-        r.enable = false;
-        gleam.enable = false;
-        dart.enable = false;
-        elixir.enable = false;
-        haskell.enable = false;
-        ruby.enable = false;
-        fsharp.enable = false;
-
-        tailwind.enable = false;
-        svelte.enable = false;
       };
 
       visuals = {
-        nvim-scrollbar.enable = false;
         nvim-web-devicons.enable = true;
         nvim-cursorline.enable = true;
-        cinnamon-nvim.enable = false;
-        fidget-nvim.enable = false;
-
-        highlight-undo.enable = false;
-        indent-blankline.enable = false;
-
-        # Fun
-        cellular-automaton.enable = false;
       };
 
       statusline = {
@@ -131,7 +80,6 @@
       # matcher library.
       autocomplete = {
         nvim-cmp.enable = true;
-        blink-cmp.enable = false;
       };
 
       snippets.luasnip.enable = false;
@@ -236,15 +184,6 @@
           };
         };
         fastaction.enable = false;
-      };
-
-      assistant = {
-        chatgpt.enable = false;
-        copilot = {
-          enable = false;
-          cmp.enable = false;
-        };
-        codecompanion-nvim.enable = false;
       };
 
       session = {
