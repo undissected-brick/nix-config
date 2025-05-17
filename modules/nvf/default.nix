@@ -1,6 +1,13 @@
 { pkgs, ...}: {
   environment.variables.EDITOR = "nvim";
   # Manual: https://notashelf.github.io/nvf/options.html
+
+  imports = [
+    ./config/languages.nix
+    ./config/options.nix
+    ./config/style.nix
+  ];
+
   programs.nvf = {
     enable = true;
 
@@ -18,13 +25,6 @@
         logFile = "/tmp/nvim.log";
       };
 
-      spellcheck = {
-        enable = false;
-      };
-
-      # Must be enabled for the language modules to hook into the LSP API:
-      lsp.enable = true; 
-
       debugger = {
         nvim-dap = {
           enable = true;
@@ -32,44 +32,9 @@
         };
       };
 
-      # This section does not include a comprehensive list of available language modules.
-      # To list all available language module options, please visit the nvf manual.
-      languages = {
-        enableFormat = true; #
-        enableTreesitter = true;
-        enableExtraDiagnostics = true;
-
-        nix.enable = true;
-        markdown.enable = true;
-
-        rust = {
-          enable = true;
-          crates.enable = true;
-        };
-
-        bash.enable = true;
-        clang.enable = true;
-
-        css.enable = false;
-        html.enable = false;
-      };
-
       visuals = {
         nvim-web-devicons.enable = true;
         nvim-cursorline.enable = true;
-      };
-
-      statusline = {
-        lualine = {
-          enable = true;
-          theme = "gruvbox";
-        };
-      };
-
-      theme = {
-        enable = true;
-        name = "gruvbox";
-        style = "dark";
       };
 
       autopairs.nvim-autopairs.enable = false;
