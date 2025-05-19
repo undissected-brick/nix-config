@@ -19,7 +19,7 @@
 	home.packages = with pkgs; [
 		firefox
 		clang rustup
-		tutanota-desktop
+    tutanota-desktop
 		vscode
 	];
 	
