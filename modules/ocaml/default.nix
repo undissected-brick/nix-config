@@ -1,8 +1,11 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     ocaml
-    ocamlPackages.utop
-    ocamlPackages.ocamlbuild
     dune_3
-  ];
+  ] ++
+  (with pkgs.ocamlPackages; [
+    utop
+    ocamlbuild
+    ocamlformat
+  ]);
 }

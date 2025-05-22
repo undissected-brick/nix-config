@@ -23,4 +23,6 @@
       html.enable = false;
     };
   };
+
+  imports = [ ./ocaml.nix ];
 }

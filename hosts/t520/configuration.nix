@@ -3,6 +3,7 @@
     ./hardware-configuration.nix
     ../../modules/desktop
     ../../modules/nvf
+    ../../modules/ocaml
     ../../modules/shell/zsh
     ../../modules/system
     inputs.home-manager.nixosModules.default
