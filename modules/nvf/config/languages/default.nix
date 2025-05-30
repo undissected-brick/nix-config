@@ -21,6 +21,8 @@
 
       css.enable = false;
       html.enable = false;
+
+      typst.enable = true;
     };
   };
 

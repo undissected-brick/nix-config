@@ -1,6 +1,7 @@
 { inputs, values, ... }: {
   imports = [ 
     ./hardware-configuration.nix
+    ../../modules/applications/typst
     ../../modules/desktop
     ../../modules/nvf
     ../../modules/ocaml
