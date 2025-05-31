@@ -114,7 +114,7 @@ button:hover {
     }
 }
 
-#battery.is10:not(.charging) {
+#battery.bad:not(.charging) {
     /* background-color: #f53c3c; */
     color: #ffffff;
     animation-name: blink;
