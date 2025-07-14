@@ -3,6 +3,7 @@
   # Manual: https://notashelf.github.io/nvf/options.html
 
   imports = [
+		./config/blink-cmp
     ./config/languages
     ./config/options.nix
     ./config/style.nix
@@ -28,9 +29,6 @@
         nvim-cursorline.enable = true;
       };
 
-      autocomplete = {
-        blink-cmp.enable = true; # Autocompletion with fuzzy-finding. So has to build fuzzy match library
-      };
 
       treesitter.context.enable = true;
 
