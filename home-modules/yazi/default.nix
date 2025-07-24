@@ -15,9 +15,18 @@ in {
     shellWrapperName = "y";
 
     settings = {
-      opener.play = [
-        { run = ''${./scripts/viv.sh} "$@"''; orphan = true; for = "unix"; }
-      ];
+      opener = {
+				play = [
+        	{ run = ''${./scripts/viv.sh} "$@"''; orphan = true; for = "unix"; }
+      	];
+				editor = [
+					{ run = ''$EDITOR "$@"''; block=true; for = "unix"; }
+				];
+			};
+			rules = [
+				{ mime = "text/*"; use = "edit"; }
+				{ mime = "inode/*empty"; use = "edit"; }
+			];
     };
 
     plugins = {
