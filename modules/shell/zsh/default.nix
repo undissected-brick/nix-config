@@ -1,4 +1,4 @@
-{ pkgs, values, ... }: {
+{ config, pkgs, values, ... }: {
 
 	imports = [
 		./aliases.nix
@@ -12,8 +12,7 @@
 			prezto = import ./prezto;
 
 			enable = true;
-			dotDir = ".config/zsh";
-
+			dotDir = "${config.users.users.${values.mainuser}.home}/.config/zsh";
 
 			enableCompletion = true;
 			autosuggestion.enable = true;
