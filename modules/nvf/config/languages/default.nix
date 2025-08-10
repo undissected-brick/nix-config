@@ -16,11 +16,13 @@
         crates.enable = true;
       };
 
+			python.enable = true;
+
       bash.enable = true;
       clang.enable = true;
 
-      css.enable = false;
-      html.enable = false;
+      css.enable = true;
+      html.enable = true;
 
       typst.enable = true;
     };
