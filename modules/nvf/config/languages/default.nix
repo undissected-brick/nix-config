@@ -4,7 +4,7 @@
     lsp.enable = true;
 
     languages = {
-      enableFormat = false; # Seriously, does ANYONE know how to make language specific auto indentation that isn't awful
+      enableFormat = false;
       enableTreesitter = true;
       enableExtraDiagnostics = true;
 
