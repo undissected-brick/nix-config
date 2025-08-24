@@ -15,11 +15,11 @@
     };
   };
 
-  outputs = { self, nixpkgs, nvf, ... }@inputs:
+  outputs = { nixpkgs, ... }@inputs:
     let
       values = import ./values.nix;
       mkSystem = system: location: nixpkgs.lib.nixosSystem {
-        system = system;
+				inherit system;
         modules = [
           ./hosts/${location}/configuration.nix
           inputs.home-manager.nixosModules.default
