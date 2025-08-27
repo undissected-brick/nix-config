@@ -18,9 +18,7 @@
 
 	home.packages = with pkgs; [
 		firefox
-		clang rustup
     tutanota-desktop
-		vscode
 	];
 	
 	#These things exist, but won't display in menus:

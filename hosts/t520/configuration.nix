@@ -3,6 +3,7 @@
     ./hardware-configuration.nix
     ../../modules/applications/typst
     ../../modules/desktop
+		../../modules/dev
     ../../modules/nvf
     ../../modules/shell/zsh
     ../../modules/system
