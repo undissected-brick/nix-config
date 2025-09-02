@@ -5,7 +5,7 @@ rec {
 
 	home = "/home/${mainuser}";
 
-	flakeDir = "hyprnix";
+	flakeDir = "nix-config";
 	flakePath = "${home}/${flakeDir}";
 
 	scriptDir = ".scripts";
