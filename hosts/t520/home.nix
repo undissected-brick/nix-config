@@ -1,6 +1,7 @@
-{ pkgs, inputs, lib, values, ... }: {
+{ pkgs, lib, values, ... }: {
 	
 	imports = [
+		../../home-modules/dev/vscode
 		../../home-modules/home-packages
 		../../home-modules/kitty
 		../../home-modules/windows-and-tiles

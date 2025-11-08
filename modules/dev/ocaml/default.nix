@@ -1,3 +1,3 @@
 { pkgs, ... }: {
-	environment.systemPackages = with pkgs; [ opam gcc pkg-config ];
+	environment.systemPackages = with pkgs; [ opam gcc gmp pkg-config ];
 }
