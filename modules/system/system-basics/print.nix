@@ -1,8 +1,6 @@
 { lib, pkgs, ... }: {
 	
-	nixpkgs.config.allowUnfreePredicate = pkg:
-		builtins.elem (lib.getName pkg) [ "epson_201207w" ];
-	
+	# note that the driver is unfree - allowUnfreePredicate (in configuration.nix) includes it
 
 	# Enable printing with CUPS:
 	services.printing = {

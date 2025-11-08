@@ -1,4 +1,4 @@
-{ inputs, values, ... }: {
+{ lib, inputs, values, ... }: {
   imports = [ 
     ./hardware-configuration.nix
     ../../modules/applications/typst
@@ -9,6 +9,11 @@
     ../../modules/system
     inputs.home-manager.nixosModules.default
   ];
+
+	nixpkgs.config.allowUnfreePredicate = pkg: 
+		builtins.elem (lib.getName pkg) [
+			"epson_201207w"
+		];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
